@@ -1,4 +1,5 @@
 streamlit
 pandas
-matplotlib.pyp
+plotly
+altair
 fpdf
