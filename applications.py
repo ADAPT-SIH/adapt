@@ -3,20 +3,11 @@
 # Save as app.py and run: streamlit run app.py
 # Note: many numbers here are illustrative defaults. Replace with validated data if available.
 
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-from fpdf import FPDF
-import textwrap
+
 import altair as alt
-import plotly.express as px
+import pandas as pd
 import streamlit as st
 
-x = [1, 2, 3, 4, 5]
-y = [10, 20, 15, 25, 30]
-
-fig = px.line(x=x, y=y, title="Line Chart Example")
-st.plotly_chart(fig)
 df = pd.DataFrame({
     "x": [1, 2, 3, 4, 5],
     "y": [10, 20, 15, 25, 30]
