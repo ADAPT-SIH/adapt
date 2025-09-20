@@ -5,9 +5,28 @@
 
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import plotly.express as px
 from fpdf import FPDF
 import textwrap
+import altair as alt
+import plotly.express as px
+import streamlit as st
+
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 15, 25, 30]
+
+fig = px.line(x=x, y=y, title="Line Chart Example")
+st.plotly_chart(fig)
+df = pd.DataFrame({
+    "x": [1, 2, 3, 4, 5],
+    "y": [10, 20, 15, 25, 30]
+})
+
+chart = alt.Chart(df).mark_line().encode(
+    x="x",
+    y="y"
+)
+st.altair_chart(chart, use_container_width=True)
 
 st.set_page_config(page_title="SustainaMine - LCA for Metals", layout="wide")
 
